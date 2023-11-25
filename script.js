@@ -18,8 +18,8 @@ function generatePassword() {
   
 }
 
-function renderPasswords() {
-  if (passwords.passwordList.length != 0) {
+function renderPasswords(ignoreLength) {
+  if (passwords.passwordList.length != 0 || ignoreLength) {
     document.getElementById("passwordlList").innerHTML = ""
     passwords.passwordList.forEach(element => {
       document.getElementById("passwordlList").innerHTML +="<div class='passwordItem'>"+ 
@@ -38,6 +38,10 @@ function renderPasswords() {
         "</div>"+
     "</div>"
     });
+
+    if (passwords.passwordList.length == 0) {
+      document.getElementById("passwordlList").innerHTML += "<div id='emptyList'><p>no passwords yet</p></div>"
+    }
   }
 }
 function savePassword() {
@@ -92,7 +96,7 @@ function deletePassword(id) {
       var index = passwords.passwordList.indexOf(element);
       passwords.passwordList.splice(index, 1);
       localStorage.setItem("passwords", JSON.stringify(passwords))
-      renderPasswords()
+      renderPasswords(true)
     }
   })
 }

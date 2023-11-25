@@ -19,25 +19,26 @@ function generatePassword() {
 }
 
 function renderPasswords() {
-  document.getElementById("passwordlList").innerHTML = ""
-  passwords.passwordList.forEach(element => {
-    document.getElementById("passwordlList").innerHTML +="<div class='passwordItem'>"+ 
-    `<img src='assets/delete.svg' class='deleteIcon' onclick="deletePassword('${element.id}')">` +
-  
-  "  <div class='passwordRow'>" +
-  "    <img src='assets/website.svg'>" +
-  `    <p id='website'><a target="_blank" href="${element.website}">${element.website}</a></p>`+
-    "</div>"+
-      "<div class='passwordRow'>"+
-        "<img src='assets/user.svg' >"+
-        `<p id='username' onclick='copyToClipboard("${element.username}")'>${element.username}</p>`+
+  if (passwords.passwordList.length != 0) {
+    document.getElementById("passwordlList").innerHTML = ""
+    passwords.passwordList.forEach(element => {
+      document.getElementById("passwordlList").innerHTML +="<div class='passwordItem'>"+ 
+      `<img src='assets/delete.svg' class='deleteIcon' onclick="deletePassword('${element.id}')">` +
+    "  <div class='passwordRow'>" +
+    "    <img src='assets/website.svg'>" +
+    `    <p id='website'><a target="_blank" href="${element.website}">${element.website}</a></p>`+
       "</div>"+
-      "<div class='passwordRow'>"+
-        "<img src='assets/password.svg'>"+
-        `<p id='password' onclick='copyToClipboard("${element.password}")'>${element.password}</p>`+
-      "</div>"+
-  "</div>"
-  });
+        "<div class='passwordRow'>"+
+          "<img src='assets/user.svg' >"+
+          `<p id='username' onclick='copyToClipboard("${element.username}")'>${element.username}</p>`+
+        "</div>"+
+        "<div class='passwordRow'>"+
+          "<img src='assets/password.svg'>"+
+          `<p id='password' onclick='copyToClipboard("${element.password}")'>${element.password}</p>`+
+        "</div>"+
+    "</div>"
+    });
+  }
 }
 function savePassword() {
   const website = document.getElementById("website").value;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Password Manager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Password Manager</h1>
+    </div>
+    <form >
+      <div>
+        <label for="website">Website:</label>
+        <input type="text" id="website">
+      </div>
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="text" id="password">
+      </div>
+      <button type="button" onclick="generatePassword()">Generate Password</button>
+      <button type="button" onclick="savePassword()">Save Password</button>
+    </form>
+    <div id="passwords" class="center">
+      <h2>Passwörter</h2>
+      <div id="passwordlList">
+        <div id="emptyList">
+
+        </div>
+        <!-- <div class="passwordItem">
+          <img src="assets/delete.svg" class="deleteIcon" alt="">
+
+          <div class="passwordRow">
+            <img src="assets/website.svg" alt="">
+            <p onclick="copyToClipboard('youtube.com')">youtube.com</p>
+          </div>
+            <div class="passwordRow">
+              <img src="assets/user.svg" alt="">
+              <p>Jan.kpe</p>
+            </div>
+            <div class="passwordRow">
+              <img src="assets/password.svg" alt="">
+              <p>asdfsdf</p>
+            </div>
+      </div> -->
+    </div>
+
+
+<script src="script.js"></script>
+
+  </body>
+</html>

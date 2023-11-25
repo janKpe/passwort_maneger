@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  .center {
+    display: grid;
+    justify-content: center;
+  }
+  
+  form {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  
+  button[type="button"] {
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: white;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="button"]:hover {
+    cursor: pointer;
+    background-color: blue;
+    border-color: blue;
+  }
+  
+
+  .passwordItem {
+    position: relative;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    width: 80vh;
+    margin-top: 15px;
+  }
+  
+  .passwordRow {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .passwordRow p {
+    margin-left: 8px;
+    cursor: pointer;
+    
+  }
+  
+  .deleteIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
